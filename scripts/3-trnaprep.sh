@@ -41,7 +41,9 @@ $bedtools getfasta -name -split -s -fi ${genomeName}.fa -bed ${tRNAName}_nopseud
 
 ##append mitocondrial tRNAs to the mature tRNA file:
 
-cat ${tRNAmito} >>  ${tRNAName}_nopseudo.fa
+awk -F '[/^>_-]' 'NF>1{print ">mito-"$6"-"$7} {print $1}' ${tRNAmito} >  mod_${tRNAmito}
+ 
+cat mod_${tRNAmito} >>  ${tRNAName}_nopseudo.fa
 
 ##add CCA tail to tRNA chromosomes
 perl ${scriptDir}/addCCA.pl ${tRNAName}_nopseudo.fa ${tRNAmature}.fa
