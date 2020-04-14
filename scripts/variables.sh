@@ -34,6 +34,4 @@ chrM= #name of the mitochondrial chromosome in your genome ("Mito" in yeast, "ch
 tRNAmito= #name of the mitochondrial tRNA fasta file that you have downloaded from mitotRNAdb INCLUDING FILE EXTENSION
 
 #specify multimapper handling:
-#set to "uniq" for only uniquely mapped reads, set to "phased" for only phased mapped reads (=if multimapping, the reads are not filtered out if they have the same mismatch pattern with all the loci they map to), set to "all" for all reads.
-
-multimapperHandling="phased"
+multimapperHandling=#set to "uniq" for only uniquely mapped reads, set to "phased" for only phased mapped reads (=if multimapping, the reads are not filtered out if they have the same mismatch pattern with all the loci they map to), set to "all" for all reads.
