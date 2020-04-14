@@ -1,6 +1,8 @@
 # tRNA alignment pipeline - Hoffmann original
 
-This pipeline is adapted from https://github.com/AnneHoffmann/tRNA-read-mapping/ under the MIT licens for usage with a Docker container 
+This pipeline is adapted from https://github.com/AnneHoffmann/tRNA-read-mapping/ under the MIT licens for usage with a Docker container and qsub commands for a Sun Grid Engine (SGE) cluster.
+
+the script removePrecursor.pl was subsituted with removePrecursor_new.pl, kindly provided by Xavier Hernandez (https://github.com/hexavier/tRNA_mapping)
 
 ## Requirements:
 
