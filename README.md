@@ -80,15 +80,13 @@ qsub -cwd -N genprep -M your@mail -m ea -q short-sl7 scripts/2-genomeprep.sh
 
 At this point, remember to modify the .csv files (remove header) prior to continuing to the next script.
 
-### Depending wether you are working with an organism for which mature tRNA fasta is available in gtrnadb or not, you should use the scripts from "trnascan_based" folder.
-
 -In the variables.sh the tRNAmature will just be the same as tRNAName
 
 -For the masking it is important to keep the pseudogenes and the UNN-Undet tRNA genes (to avoid losing reads that might map also to the pseudogenes)
 
--For the second mapping to the cluster it is important to remove the pseudogenes and the UNN-Undet tRNA genes! (added in both 3-trnaprep.sh scripts)
+-For the second mapping to the cluster it is important to remove the pseudogenes and the UNN-Undet tRNA genes! (added in 3-trnaprep.sh script)
 
-### Make sure you use the correct scripts for your case and proceed
+### now you can proceed:
 
 ```bash
 qsub -cwd -N trnaprep -M your@mail -m ea -q short-sl7 scripts/3-tRNAprep.sh
