@@ -33,6 +33,13 @@ mkdir -p $project/data/genome $project/data/ngs $project/scripts $project/analys
 
 -scripts in $project/scripts 
 
+-mitochondrial tRNAs in $project/data/genome:
+
+1. download mitochondrial tRNA sequences from and put the file in $project/data/genome:
+
+http://mttrna.bioinf.uni-leipzig.de/mtDataOutput/Organisms (select "send fasta")
+
+
 
 ### Download Docker as Singularity image:
 
