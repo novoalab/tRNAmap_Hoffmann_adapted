@@ -34,18 +34,18 @@ $segemehl -x ${genomeName}_artificial.idx -d ${genomeName}_artificial.fa
 
 grep -v pseudo ${tRNAName}.csv | grep -v Undet > ${tRNAName}_nopseudo.csv
 
-perl ${scriptDir}/tRNAscan2bed12.pl ${tRNAName}_nopseudo.csv ${tRNAName}_mature.bed12
+perl ${scriptDir}/tRNAscan2bed12.pl ${tRNAName}_nopseudo.csv ${tRNAName}_nopseudo.bed12
 
-$bedtools getfasta -name -split -s -fi ${genomeName}.fa -bed ${tRNAName}_mature.bed12 -fo ${tRNAName}.fa
+$bedtools getfasta -name -split -s -fi ${genomeName}.fa -bed ${tRNAName}_nopseudo.bed12 -fo ${tRNAName}_nopseudo.fa
 
 ##add CCA tail to tRNA chromosomes
 
-perl ${scriptDir}/addCCA.pl ${tRNAmature}.fa ${tRNAmature}_mature.fa
+perl ${scriptDir}/addCCA.pl ${tRNAName}_nopseudo.fa ${tRNAmature}.fa
 
 
 ###mature tRNA clustering
 ##only identical tRNAs were clustered
-perl ${scriptDir}/clustering.pl ${tRNAmature}_mature.fa ${tRNAmature}_cluster.fa ${tRNAmature}_clusterInfo.fa
+perl ${scriptDir}/clustering.pl ${tRNAmature}.fa ${tRNAmature}_cluster.fa ${tRNAmature}_clusterInfo.fa
 
 ##indexing tRNA cluster
 $samtools faidx ${tRNAmature}_cluster.fa
