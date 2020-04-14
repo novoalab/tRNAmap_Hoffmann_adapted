@@ -19,7 +19,7 @@ git clone https://github.com/soniacruciani/trna_align_hoffmann.git
 ### Create project folder:
 
 ```bash
-project=yourprojectfolder
+project=fullpathtoyourprojectfolder
 
 
 mkdir -p $project/data/genome $project/data/ngs $project/scripts $project/analysis
