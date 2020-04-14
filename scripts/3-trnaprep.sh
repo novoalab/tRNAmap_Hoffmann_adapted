@@ -38,8 +38,12 @@ perl ${scriptDir}/tRNAscan2bed12.pl ${tRNAName}_nopseudo.csv ${tRNAName}_nopseud
 
 $bedtools getfasta -name -split -s -fi ${genomeName}.fa -bed ${tRNAName}_nopseudo.bed12 -fo ${tRNAName}_nopseudo.fa
 
-##add CCA tail to tRNA chromosomes
 
+##append mitocondrial tRNAs to the mature tRNA file:
+
+cat ${tRNAmito} >>  ${tRNAName}_nopseudo.fa
+
+##add CCA tail to tRNA chromosomes
 perl ${scriptDir}/addCCA.pl ${tRNAName}_nopseudo.fa ${tRNAmature}.fa
 
 
