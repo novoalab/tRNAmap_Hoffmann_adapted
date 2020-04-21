@@ -8,7 +8,7 @@ Thing we changed from the original pipeline:
 
 -we use 15nt as minimum read length for the trimming
 
--We use tRNAscan output for masking the genome and for the pre-tRNA reference, but we downloaded the high confidence mature tRNA set from gtRNAdb for the mature tRNA mapping
+-We use tRNAscan output for masking the genome and for the pre-tRNA reference, but we downloaded the high confidence mature tRNA set from gtRNAdb for the mature tRNA mapping - but we keep the possibility to work on tRNAscan output. If working with tRNAscan output, we exclude pseudogenes and tRNAs with NNN anticodons.
 
 -We keep only reads mapoing to the positive strand when mapping to the mature tRNAs
 
