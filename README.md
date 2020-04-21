@@ -2,7 +2,16 @@
 
 This pipeline is adapted from https://github.com/AnneHoffmann/tRNA-read-mapping/ under the MIT licens for usage with a Docker container and qsub commands for a Sun Grid Engine (SGE) cluster. We tried to stick to the same versions of the softwares as in Hoffmann's pipeline whenever possible. When the version needed was not available, we used the closest one. versions details are available in variables.sh script.
 
-the script removePrecursor.pl was subsituted with removePrecursor_new.pl, kindly provided by Xavier Hernandez (https://github.com/hexavier/tRNA_mapping)
+Thing we changed from the original pipeline:
+
+-the script removePrecursor.pl was subsitute with removePrecursor_new.pl, kindly provided by Xavier Hernandez (https://github.com/hexavier/tRNA_mapping)
+
+-we use 15nt as minimum read length for the trimming
+
+-We use tRNAscan output for masking the genome and for the pre-tRNA reference, but we downloaded the high confidence mature tRNA set from gtRNAdb for the mature tRNA mapping
+
+-We keep only reads mapoing to the positive strand when mapping to the mature tRNAs
+
 
 ## Requirements:
 
