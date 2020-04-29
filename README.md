@@ -10,7 +10,7 @@ Things we changed from the original pipeline:
 
 -We use tRNAscan output for masking the genome and for the pre-tRNA reference, but we downloaded the high confidence mature tRNA set from gtRNAdb for the mature tRNA mapping - but we keep the possibility to work on tRNAscan output. If working with tRNAscan output, we exclude pseudogenes and tRNAs with NNN anticodons.
 
--We keep only reads mapoing to the positive strand when mapping to the mature tRNAs
+-We keep only reads mapping to the positive strand when mapping to the mature tRNAs
 
 
 ## Requirements:
