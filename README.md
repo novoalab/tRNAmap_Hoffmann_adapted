@@ -8,7 +8,7 @@ Whenever possible, we tried to employ the same versions of the softwares as in H
 
 ## Major differences with the original pipeline:
 
-- The script removePrecursor.pl was subsituted with a modified version of the script [removePrecursor_new.pl](https://github.com/hexavier/tRNA_mapping/blob/master/removePrecursor.pl), kindly provided by Xavier Hernandez.
+- The script removePrecursor.pl was subsituted with a modified version of the script [removePrecursor_new.pl](https://github.com/hexavier/tRNA_mapping/blob/master/removePrecursor.pl), kindly provided by Xavier Hernandez, due to a bug in dealing with intron-containing tRNA genes.
 
 - We use 15nt minimum read length for the trimming
 
@@ -25,7 +25,7 @@ Whenever possible, we tried to employ the same versions of the softwares as in H
 - This repository: 
 
 ```bash
-git clone https://github.com/soniacruciani/trna_align_hoffmann.git
+git clone https://github.com/soniacruciani/tRNAmap_Hoffmann_adapted.git
 ```
 
 ## Getting started:
