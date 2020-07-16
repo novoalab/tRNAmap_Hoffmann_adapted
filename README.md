@@ -1,16 +1,18 @@
 # tRNA alignment pipeline
 
-This pipeline is adapted from https://github.com/AnneHoffmann/tRNA-read-mapping/ under the MIT license for usage with a Docker container and qsub commands for a Sun Grid Engine (SGE) cluster. We tried to stick to the same versions of the softwares as in Hoffmann's pipeline whenever possible. When the version needed was not available, we used the closest one. versions details are available in variables.sh script.
+This pipeline has been adapted from the code described in [Hoffman et al Bioinformatics 2018] (https://pubmed.ncbi.nlm.nih.gov/29228294/), which can be found here (https://github.com/AnneHoffmann/tRNA-read-mapping/) under the MIT license for usage with a Docker container and qsub commands for a Sun Grid Engine (SGE) cluster. 
 
-Things we changed from the original pipeline:
+We tried to employ the same versions of the softwares as in Hoffmann's pipeline whenever possible. When the version needed was not available, we used the closest one. versions details are available in variables.sh script.
 
--the script removePrecursor.pl was subsitute with removePrecursor_new.pl, kindly provided by Xavier Hernandez (https://github.com/hexavier/tRNA_mapping)
+Major differences with the original pipeline:
 
--we use 15nt as minimum read length for the trimming
+- The script removePrecursor.pl was subsituted with removePrecursor_new.pl, kindly provided by Xavier Hernandez (https://github.com/hexavier/tRNA_mapping)
 
--We use tRNAscan output for masking the genome and for the pre-tRNA reference, but we downloaded the high confidence mature tRNA set from gtRNAdb for the mature tRNA mapping - but we keep the possibility to work on tRNAscan output. If working with tRNAscan output, we exclude pseudogenes and tRNAs with NNN anticodons.
+- We use 15nt minimum read length for the trimming
 
--We keep only reads mapping to the positive strand when mapping to the mature tRNAs
+- We use tRNAscan output for masking the genome and for the pre-tRNA reference, but we downloaded the high confidence mature tRNA set from gtRNAdb for the mature tRNA mapping - but we keep the possibility to work on tRNAscan output. If working with tRNAscan output, we exclude pseudogenes and tRNAs with NNN anticodons.
+
+- We keep only reads mapping to the positive strand when mapping to the mature tRNAs
 
 
 ## Requirements:
