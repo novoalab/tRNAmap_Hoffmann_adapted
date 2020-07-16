@@ -6,7 +6,7 @@ We tried to employ the same versions of the softwares as in Hoffmann's pipeline 
 
 Major differences with the original pipeline:
 
-- The script removePrecursor.pl was subsituted with removePrecursor_new.pl, kindly provided by Xavier Hernandez (https://github.com/hexavier/tRNA_mapping)
+- The script removePrecursor.pl was subsituted with a modified version of the script [removePrecursor_new.pl](https://github.com/hexavier/tRNA_mapping/blob/master/removePrecursor.pl), kindly provided by Xavier Hernandez.
 
 - We use 15nt minimum read length for the trimming
 
