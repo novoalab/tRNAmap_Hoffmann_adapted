@@ -2,7 +2,9 @@
 
 This pipeline has been adapted from the code described in [Hoffman et al Bioinformatics 2018](https://pubmed.ncbi.nlm.nih.gov/29228294/), which can be found [here](https://github.com/AnneHoffmann/tRNA-read-mapping/) and is distributed under the MIT license. 
 
-We have adapted this code to improve its performance in species that is not human (which was used to benchmark the pipeline described above) as well as for usage of the pipeline with a Docker container and qsub commands for a Sun Grid Engine (SGE) cluster. 
+We have adapted this code to:
+* 1) **improve its performance non-human species** (the original pipeline predicts too many tRNA cluster when using other species than human)
+* 2) to implement the pipeline in the form of a **Docker container** as well as for qsub commands for a Sun Grid Engine (SGE) cluster. 
 
 Whenever possible, we tried to employ the same versions of the softwares as in Hoffmann's pipeline. When the version needed was not available, we used the closest one. Versions and software details can be found in variables.sh.
 
