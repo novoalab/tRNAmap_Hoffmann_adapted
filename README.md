@@ -17,9 +17,9 @@ Major differences with the original pipeline:
 
 ## Requirements:
 
--Singularity (tested with version 2.6.1-dist)
+- Singularity (tested with version 2.6.1-dist)
 
--This repository: 
+- This repository: 
 
 ```bash
 git clone https://github.com/soniacruciani/trna_align_hoffmann.git
@@ -38,17 +38,15 @@ mkdir -p $project/data/genome $project/data/ngs $project/scripts $project/analys
 
 ### 2. Locate files in the corresponding directory:
 
--fastq files in $project/data/ngs
+- fastq files in $project/data/ngs
 
--adapter sequence (adapter.fa) in $project/data/ngs
+- adapter sequence (adapter.fa) in $project/data/ngs
 
--reference genome in $project/data/genome
+- reference genome in $project/data/genome
 
--scripts in $project/scripts 
+- scripts in $project/scripts 
 
--mitochondrial tRNAs in $project/data/genome:
-
-1. download mitochondrial tRNA sequences from and put the file in $project/data/genome:
+- mitochondrial tRNAs in $project/data/genome: download mitochondrial tRNA sequences from and put the file in $project/data/genome:
 
 http://mttrna.bioinf.uni-leipzig.de/mtDataOutput/Organisms (select "send fasta")
 
