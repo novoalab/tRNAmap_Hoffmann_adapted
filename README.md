@@ -1,4 +1,4 @@
-# tRNA alignment pipeline
+# tRNAlign: tRNA alignment pipeline and Docker container
 
 This pipeline has been adapted from the code described in [Hoffman et al Bioinformatics 2018](https://pubmed.ncbi.nlm.nih.gov/29228294/), which can be found [here](https://github.com/AnneHoffmann/tRNA-read-mapping/) and is distributed under the MIT license. 
 
