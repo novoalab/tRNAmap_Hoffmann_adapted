@@ -1,6 +1,6 @@
 # tRNA alignment pipeline
 
-This pipeline has been adapted from the code described in [Hoffman et al Bioinformatics 2018](https://pubmed.ncbi.nlm.nih.gov/29228294/), which can be found here (https://github.com/AnneHoffmann/tRNA-read-mapping/) under the MIT license for usage with a Docker container and qsub commands for a Sun Grid Engine (SGE) cluster. 
+This pipeline has been adapted from the code described in [Hoffman et al Bioinformatics 2018](https://pubmed.ncbi.nlm.nih.gov/29228294/), which can be found [here](https://github.com/AnneHoffmann/tRNA-read-mapping/) under the MIT license for usage with a Docker container and qsub commands for a Sun Grid Engine (SGE) cluster. 
 
 We tried to employ the same versions of the softwares as in Hoffmann's pipeline whenever possible. When the version needed was not available, we used the closest one. versions details are available in variables.sh script.
 
