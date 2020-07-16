@@ -4,9 +4,10 @@ This pipeline has been adapted from the code described in [Hoffman et al Bioinfo
 
 We have adapted this code to:
 * 1) **improve its performance non-human species** (the original pipeline predicts too many tRNA cluster when using other species than human)
-* 2) to implement the pipeline in the form of a **Docker container** as well as for qsub commands for a Sun Grid Engine (SGE) cluster. 
+* 2) to implement the pipeline in the form of a **Docker container**, which avoids the requirement of installing the individual softwares used by the pipeline individually. We then run the Docker container using **Singularity**.
 
 Whenever possible, we tried to employ the same versions of the softwares as in Hoffmann's pipeline. When the version needed was not available, we used the closest one. Versions and software details can be found in variables.sh.
+ 
 
 ## Major differences with the original pipeline:
 
@@ -18,7 +19,8 @@ Whenever possible, we tried to employ the same versions of the softwares as in H
 
 - We keep only reads mapping to the positive strand when mapping to the mature tRNAs
 
-- Adapted as Docker pipeline
+- Adapted as Docker container, no need to install dependencies or individual softwares that the pipeline uses in your local computer or cluster.
+
 
 ## Requirements:
 
@@ -29,6 +31,7 @@ Whenever possible, we tried to employ the same versions of the softwares as in H
 ```bash
 git clone https://github.com/soniacruciani/tRNAmap_Hoffmann_adapted.git
 ```
+
 
 ## Getting started:
 
