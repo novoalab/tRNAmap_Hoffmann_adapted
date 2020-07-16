@@ -111,7 +111,7 @@ for n in $(ls $project/analysis/mapping/*_filtered.fastq.gz); do qsub -cwd -N $(
 ```
 
 ## Citing this work
-If you use this code, please cite the github repo, thank you!
+A pre-print is currently in preparation.
 
 ## Issues/Questions
 
