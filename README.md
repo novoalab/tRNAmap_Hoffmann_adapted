@@ -27,7 +27,7 @@ git clone https://github.com/soniacruciani/trna_align_hoffmann.git
 
 ## Getting started:
 
-### Create project folder:
+### 1. Create project folder:
 
 ```bash
 project=fullpathtoyourprojectfolder
@@ -36,7 +36,7 @@ project=fullpathtoyourprojectfolder
 mkdir -p $project/data/genome $project/data/ngs $project/scripts $project/analysis
 ```
 
-### Locate files in the corresponding directory:
+### 2. Locate files in the corresponding directory:
 
 -fastq files in $project/data/ngs
 
@@ -54,7 +54,7 @@ http://mttrna.bioinf.uni-leipzig.de/mtDataOutput/Organisms (select "send fasta")
 
 
 
-### Download Docker as Singularity image:
+### 3. Download Docker as a. Singularity image:
 
 ```bash
 cd $project/scripts
@@ -62,7 +62,7 @@ cd $project/scripts
 singularity pull docker://scruciani/trna_align:100120
 ```
 
-### Don't forget to set up the variables in the variables.sh script!
+### 4. Don't forget to set up the variables in the variables.sh script!
 
 so far, the Picard and GATK cannot work from the singularity, so substitute the path with your local path to the picard.jar and GenomeAnalysisTK.jar files, available online.
 
@@ -71,7 +71,9 @@ cd $project/scripts
 vim variables.sh
 ```
 
-## Run the pipeline!
+Now you are ready to start running the pipeline! :) 
+
+## Running the pipeline:
 
 ```bash
 cd $project
@@ -81,7 +83,7 @@ You can decide whether to qsub or to source the scripts, here I report the qsub 
 
 The 1-readqcandtrim.sh and 2-genomeprep.sh can be done in parallel, as they do not depend the one on the other.
 
-### Always qsub from the $project folder!
+### Note: Always qsub from the $project folder!
 
 ```bash
 qsub -cwd -N qcandtrim -M your@mail -m ea -q short-sl7 scripts/1-readqcandtrim.sh
@@ -97,7 +99,7 @@ At this point, remember to modify the .csv files (remove header) prior to contin
 
 -For the second mapping to the cluster it is important to remove the pseudogenes and the UNN-Undet tRNA genes! (added in 3-trnaprep.sh script)
 
-### now you can proceed:
+### Now you can proceed with the pipeline as follows:
 
 ```bash
 qsub -cwd -N trnaprep -M your@mail -m ea -q short-sl7 scripts/3-tRNAprep.sh
@@ -107,3 +109,12 @@ for n in $(ls $project/data/ngs/*_trimmed.fastq.gz); do qsub -cwd -N $(basename 
 
 for n in $(ls $project/analysis/mapping/*_filtered.fastq.gz); do qsub -cwd -N $(basename $n _filtered.fastq.gz)_gatk -M your@mail -m ea -q short-sl7 -pe smp 16 -v n=$n scripts/5-postprocessing.sh; done
 ```
+
+## Citing this work
+If you use this code, please cite the github repo, thank you!
+
+## Issues/Questions
+
+Please open an issue if you have any doubts on how to use this code. Thank you!
+
+
