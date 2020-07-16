@@ -1,10 +1,12 @@
 # tRNA alignment pipeline
 
-This pipeline has been adapted from the code described in [Hoffman et al Bioinformatics 2018](https://pubmed.ncbi.nlm.nih.gov/29228294/), which can be found [here](https://github.com/AnneHoffmann/tRNA-read-mapping/) under the MIT license for usage with a Docker container and qsub commands for a Sun Grid Engine (SGE) cluster. 
+This pipeline has been adapted from the code described in [Hoffman et al Bioinformatics 2018](https://pubmed.ncbi.nlm.nih.gov/29228294/), which can be found [here](https://github.com/AnneHoffmann/tRNA-read-mapping/) and is distributed under the MIT license. 
 
-We tried to employ the same versions of the softwares as in Hoffmann's pipeline whenever possible. When the version needed was not available, we used the closest one. versions details are available in variables.sh script.
+We have adapted this code to improve its performance in species that is not human (which was used to benchmark the pipeline described above) as well as for usage of the pipeline with a Docker container and qsub commands for a Sun Grid Engine (SGE) cluster. 
 
-Major differences with the original pipeline:
+Whenever possible, we tried to employ the same versions of the softwares as in Hoffmann's pipeline. When the version needed was not available, we used the closest one. Versions and software details can be found in variables.sh.
+
+## Major differences with the original pipeline:
 
 - The script removePrecursor.pl was subsituted with a modified version of the script [removePrecursor_new.pl](https://github.com/hexavier/tRNA_mapping/blob/master/removePrecursor.pl), kindly provided by Xavier Hernandez.
 
@@ -14,6 +16,7 @@ Major differences with the original pipeline:
 
 - We keep only reads mapping to the positive strand when mapping to the mature tRNAs
 
+- Adapted as Docker pipeline
 
 ## Requirements:
 
