@@ -1,8 +1,8 @@
-# tRNAlign: a tRNA alignment pipeline 
+# tRNA alignment pipeline  
 
 This pipeline has been adapted from the code described in [Hoffman et al Bioinformatics 2018](https://pubmed.ncbi.nlm.nih.gov/29228294/), which can be found [here](https://github.com/AnneHoffmann/tRNA-read-mapping/) and is distributed under the MIT license. 
 
-We have adapted this code to:
+We have adapted the code mentioned above to:
 * 1) **improve its performance non-human species** (where the quality of tRNAScan predictions can be lower, therefore leading to the annotation of too many tRNA clusters for the mapping). 
 * 2) implement the pipeline in the form of a **Docker container**, which avoids the requirement of installing the individual softwares used by the pipeline individually. The Docker container can be downloaded as **Singularity image** to ensure reproducibility and simplicity.
 
