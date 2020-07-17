@@ -4,7 +4,7 @@ This pipeline has been adapted from the code described in [Hoffman et al Bioinfo
 
 We have adapted this code to:
 * 1) **improve its performance non-human species** (where the quality of tRNAScan predictions can be lower, therefore leading to the annotation of too many tRNA clusters for the mapping). 
-* 2) to implement the pipeline in the form of a **Docker container**, which avoids the requirement of installing the individual softwares used by the pipeline individually. The Docker container can be downloaded as **Singularity image** to ensure reproducibility and simplicity.
+* 2) implement the pipeline in the form of a **Docker container**, which avoids the requirement of installing the individual softwares used by the pipeline individually. The Docker container can be downloaded as **Singularity image** to ensure reproducibility and simplicity.
 
 Whenever possible, we tried to employ the same versions of the softwares as in Hoffmann's pipeline. When the version needed was not available, we used the closest one. Versions and software details can be found in variables.sh.
  
@@ -70,7 +70,7 @@ singularity pull docker://scruciani/trna_align:100120
 
 ### 4. Don't forget to set up the variables in the variables.sh script!
 
-so far, the Picard and GATK cannot work from the singularity, so substitute the path with your local path to the picard.jar and GenomeAnalysisTK.jar files, available online.
+Please note that so far, **Picard** and **GATK** cannot work from singularity image, so you have to download picard.jar and GenomeAnalysisTK.jar files and place them in your bin. Versions required by Hoffmann's pipeline are 2.2.1 for Picard and 3.5-0-g36282e4 for GATK.
 
 ```bash
 cd $project/scripts
