@@ -3,8 +3,8 @@
 This pipeline has been adapted from the code described in [Hoffman et al Bioinformatics 2018](https://pubmed.ncbi.nlm.nih.gov/29228294/), which can be found [here](https://github.com/AnneHoffmann/tRNA-read-mapping/) and is distributed under the MIT license. 
 
 We have adapted this code to:
-* 1) **improve its performance non-human species** (the original pipeline predicts too many tRNA cluster when using other species than human)
-* 2) to implement the pipeline in the form of a **Docker container**, which avoids the requirement of installing the individual softwares used by the pipeline individually. We then run the Docker container using **Singularity**.
+* 1) **improve its performance non-human species** (where the quality of tRNAScan predictions can be lower, therefore leading to the annotation of too many tRNA clusters for the mapping). 
+* 2) to implement the pipeline in the form of a **Docker container**, which avoids the requirement of installing the individual softwares used by the pipeline individually. The Docker container can be downloaded as **Singularity image** to ensure reproducibility and simplicity.
 
 Whenever possible, we tried to employ the same versions of the softwares as in Hoffmann's pipeline. When the version needed was not available, we used the closest one. Versions and software details can be found in variables.sh.
  
@@ -15,11 +15,11 @@ Whenever possible, we tried to employ the same versions of the softwares as in H
 
 - We use 15nt minimum read length for the trimming
 
-- We use tRNAscan output for masking the genome and for the pre-tRNA reference, but we downloaded the high confidence mature tRNA set from gtRNAdb for the mature tRNA mapping - but we keep the possibility to work on tRNAscan output. If working with tRNAscan output, we exclude pseudogenes and tRNAs with NNN anticodons.
+- We use tRNAscan output for masking the genome and for the pre-tRNA reference, but we downloaded the high confidence mature tRNA set from gtRNAdb for the mature tRNA mapping - still, we keep the possibility to map on tRNAscan output in case the users prefers. If working with tRNAscan output, we exclude pseudogenes and tRNAs with NNN anticodons.
 
 - We keep only reads mapping to the positive strand when mapping to the mature tRNAs
 
-- Adapted as Docker container, no need to install dependencies or individual softwares that the pipeline uses in your local computer or cluster.
+- We have created a Docker container with all the required software, so that there is no need to install dependencies or individual softwares that the pipeline uses in your local computer or cluster (except for java tools Picard and GATK, that need to be installed separately from the container).
 
 
 ## Requirements:
@@ -60,7 +60,7 @@ http://mttrna.bioinf.uni-leipzig.de/mtDataOutput/Organisms (select "send fasta")
 
 
 
-### 3. Download Docker as a. Singularity image:
+### 3. Download Docker as a Singularity image:
 
 ```bash
 cd $project/scripts
