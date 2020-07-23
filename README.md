@@ -1,6 +1,6 @@
 # tRNA alignment pipeline  
 
-This pipeline has been adapted from the code described in [Hoffman et al Bioinformatics 2018](https://pubmed.ncbi.nlm.nih.gov/29228294/), which can be found [here] AnneHoffmann/tRNA-read-mapping/) and is distributed under the MIT license. 
+This pipeline has been adapted from the code described in [Hoffman et al Bioinformatics 2018](https://pubmed.ncbi.nlm.nih.gov/29228294/), which can be found [here] (https://github.com/AnneHoffmann/tRNA-read-mapping) and is distributed under the MIT license. 
 
 We have adapted the code mentioned above to:
 * 1) **improve its performance non-human species** (where the quality of tRNAScan predictions can be lower, therefore leading to the annotation of too many tRNA clusters for the mapping). 
