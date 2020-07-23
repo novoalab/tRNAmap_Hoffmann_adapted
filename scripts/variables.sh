@@ -1,6 +1,6 @@
 #this script will be sourced at the beginning of every other script to define all the variables
 #set up your project folder
-project=yourprojectfolderpath (that will always be the folder from which you qsub the scripts)
+project=#yourprojectfolderpath (that will always be the folder from which you qsub the scripts)
 
 #Executables
 
