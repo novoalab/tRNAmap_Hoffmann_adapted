@@ -1,6 +1,6 @@
 # tRNA alignment pipeline  
 
-This pipeline has been adapted from the code described in [Hoffman et al Bioinformatics 2018](https://pubmed.ncbi.nlm.nih.gov/29228294/), which can be found [here](https://github.com/AnneHoffmann/tRNA-read-mapping/) and is distributed under the MIT license. 
+This pipeline has been adapted from the code described in [Hoffman et al Bioinformatics 2018](https://pubmed.ncbi.nlm.nih.gov/29228294/), which can be found [here] AnneHoffmann/tRNA-read-mapping/) and is distributed under the MIT license. 
 
 We have adapted the code mentioned above to:
 * 1) **improve its performance non-human species** (where the quality of tRNAScan predictions can be lower, therefore leading to the annotation of too many tRNA clusters for the mapping). 
@@ -71,6 +71,9 @@ singularity pull docker://scruciani/trna_align:100120
 ### 4. Don't forget to set up the variables in the variables.sh script!
 
 Please note that so far, **Picard** and **GATK** cannot work from singularity image, so you have to download picard.jar and GenomeAnalysisTK.jar files and place them in your bin. Versions required by Hoffmann's pipeline are 2.2.1 for Picard and 3.5-0-g36282e4 for GATK.
+
+Once you clone the repo, the  *variables.sh* template file that you must edit prior to running the pipeline is located under the scripts folder, with comments with regards to the information that needs to be added. 
+
 
 ```bash
 cd $project/scripts
