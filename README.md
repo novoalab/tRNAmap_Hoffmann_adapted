@@ -21,6 +21,7 @@ Whenever possible, we tried to employ the same versions of the softwares as in H
 
 - We have created a Docker container with all the required software, so that there is no need to install dependencies or individual softwares that the pipeline uses in your local computer or cluster (except for java tools Picard and GATK, that need to be installed separately from the container).
 
+-We added a script to save pre-tRNA reads in a separate .bam file for further analysis
 
 ## Requirements:
 
