@@ -11,7 +11,7 @@ Whenever possible, we tried to employ the same versions of the softwares as in H
 
 ## Major differences with the original pipeline:
 
-- The script removePrecursor.pl was substituted with a modified version of the script [removePrecursor_new.pl](https://github.com/hexavier/tRNA_mapping/blob/master/removePrecursor.pl), kindly provided by Xavier Hernandez, due to a bug in dealing with intron-containing tRNA genes.
+- The script removePrecursor.pl was substituted with a modified version of the script [removePrecursor_new.pl](https://github.com/hexavier/tRNA_mapping/blob/master/removePrecursor.pl), kindly provided by Xavier Hernandez (https://github.com/hexavier), due to a bug in dealing with intron-containing tRNA genes.
 
 - We use 15nt minimum read length for the trimming
 
